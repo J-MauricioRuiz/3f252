@@ -1,0 +1,68 @@
+@startuml
+Class SpaceInvaders
+Class Musica
+Class SonidoFx
+Class Juego
+Class Nivel
+Class Menu
+Class MenuInicio
+Class MenuPausa 
+Class MenuAjustes
+Class Estructura 
+Class Estado
+Class Solido
+Class Destruido
+Class EsquinaL
+Class EsquinaR
+Class Bloque
+Class Jugador
+Class Vida
+Class Puntuacion
+Class HiScore
+Class Nave
+Class Enemigo
+Class Alien
+Class Calamar
+Class Estacion
+Class Ovni
+Class Posicion 
+Class CHorizontal
+Class CVertical 
+Class Bala
+Class Animacion 
+Class Muerto
+Class Nuevo
+SpaceInvaders "1" *-- "1" Menu
+SpaceInvaders "1" --|> "1" Juego
+MenuInicio "1"--|>"1" Menu
+MenuPausa "1"--|>"1" Menu
+MenuAjustes "1" --|>"1" Menu
+Jugador "1" *-- "3" Vida
+Jugador "1" *-- "1" Puntuacion
+Puntuacion "1" <|-- "1" HiScore 
+Juego "1" o-- "*" Musica
+Juego "1" o--"*" SonidoFx
+Juego "1" *--"*" Nivel
+Juego "1" *--"1" Jugador
+Juego "1" *--"1" Nave
+Juego "1" *--"*" Enemigo
+Nivel "1" *--"1" Enemigo
+Nivel "1" *--"1" Estructura
+EsquinaL"1"--|>"1"Estructura
+EsquinaR"1"--|>"1"Estructura
+Bloque"1"--|>"1"Estructura
+Estructura"1"*--"1"Estado
+Solido"1"--|>"1"Estado
+Destruido"1"--|>"1"Estado
+Alien"1"--|>"1"Enemigo
+Calamar"1"--|>"1"Enemigo
+Estacion"1"--|>"1"Enemigo
+Ovni"1"--|>"1"Enemigo
+Nave"1"*--"1" Posicion
+CHorizontal"1"--|>"1" Posicion
+CVertical"1"--|>"1" Posicion
+Nave"1" o--"*"Bala
+Nave"1"*--"1"Animacion
+Muerto"1"--|>"1"Animacion
+Nuevo"1"--|>"1"Animacion
+@enduml

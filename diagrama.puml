@@ -44,7 +44,7 @@ Juego "1" o-- "*" Musica
 Juego "1" o--"*" SonidoFx
 Juego "1" *--"*" Nivel
 Juego "1" *--"1" Jugador
-Juego "1" *--"1" Nave
+Juego "1" *--"*" Nave
 Juego "1" *--"*" Enemigo
 Nivel "1" *--"1" Enemigo
 Nivel "1" *--"1" Estructura
